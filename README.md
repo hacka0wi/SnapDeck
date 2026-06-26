@@ -1,10 +1,8 @@
-# deck-tools — Claude Code plugin marketplace
+# SnapDeck — Claude Code plugin marketplace
 
-Plugins for turning a **live web app** into a polished, full-bleed **PowerPoint** deck.
+**Snap a live web app into a polished, full-bleed PowerPoint deck.**
 
-## Plugins
-
-### `cap-app-to-pptx`
+## Plugin: `snapdeck`
 Capture real UI screenshots from a running app via headless Chrome (inject the logged-in
 session to skip login, force light mode, open modals/tabs, read element coordinates for crisp
 numbered callouts), render HTML/CSS design slides to PNG, and assemble everything as full-bleed
@@ -15,16 +13,16 @@ picture slides in a `.pptx`. Ships a SKILL guide + ready-to-adapt scripts
 
 ```
 # from a local clone:
-/plugin marketplace add /path/to/claude-deck-tools
-/plugin install cap-app-to-pptx@deck-tools
+/plugin marketplace add /path/to/snapdeck
+/plugin install snapdeck@snapdeck
 
 # or from a git remote once pushed:
-/plugin marketplace add https://github.com/<org>/claude-deck-tools
-/plugin install cap-app-to-pptx@deck-tools
+/plugin marketplace add https://github.com/<org>/snapdeck
+/plugin install snapdeck@snapdeck
 ```
 
-Then invoke with `/cap-app-to-pptx`, or just ask: "make a training deck from the app",
-"recapture the screenshots", "cap the screens into pptx".
+Then invoke with `/snapdeck`, or just ask: "make a training deck from the app",
+"recapture the screenshots", "cap the screens into pptx", "เอาจอใส่สไลด์".
 
 ## Requirements
 - System Google Chrome
@@ -34,9 +32,9 @@ Then invoke with `/cap-app-to-pptx`, or just ask: "make a training deck from the
 ## Layout
 ```
 .claude-plugin/marketplace.json     # marketplace manifest (lists plugins)
-plugins/cap-app-to-pptx/
+plugins/snapdeck/
   .claude-plugin/plugin.json         # plugin manifest
-  skills/cap-app-to-pptx/            # the skill (SKILL.md + scripts + example-config.json)
+  skills/snapdeck/                   # the skill (SKILL.md + scripts + example-config.json)
 ```
 
 ## Sharing with the team

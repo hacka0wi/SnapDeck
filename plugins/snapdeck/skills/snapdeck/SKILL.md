@@ -1,7 +1,7 @@
 ---
-name: cap-app-to-pptx
+name: snapdeck
 description: >
-  Build polished, full-bleed PowerPoint training/demo decks from a LIVE web app.
+  SnapDeck — build polished, full-bleed PowerPoint training/demo decks from a LIVE web app.
   Captures real UI screenshots deterministically via headless Chrome (CDP/puppeteer) —
   injecting the logged-in session to skip login, forcing light mode, opening modals/tabs,
   and reading element coordinates for crisp callouts — then renders HTML/CSS design slides
@@ -14,7 +14,7 @@ description: >
   "training slides for <app>", "เอาจอใส่สไลด์", "ทำคู่มือ/เด็คจากระบบ".
 ---
 
-# cap-app-to-pptx — live web app → polished PowerPoint
+# SnapDeck — live web app → polished PowerPoint
 
 This skill produces decks the way a good design pipeline does: **author each slide as
 HTML/CSS, render it to a 1920×1080-class PNG with headless Chrome, and drop the PNGs into the
