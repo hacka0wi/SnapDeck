@@ -1,41 +1,68 @@
-# SnapDeck — Claude Code plugin marketplace
+<div align="center">
+
+# 📸 SnapDeck
 
 **Snap a live web app into a polished, full-bleed PowerPoint deck.**
 
-## Plugin: `snapdeck`
-Capture real UI screenshots from a running app via headless Chrome (inject the logged-in
-session to skip login, force light mode, open modals/tabs, read element coordinates for crisp
-numbered callouts), render HTML/CSS design slides to PNG, and assemble everything as full-bleed
-picture slides in a `.pptx`. Ships a SKILL guide + ready-to-adapt scripts
-(`lib.js`, `capture.js`, `slides.py`, `render.js`, `assemble.py`).
+![SnapDeck](assets/hero.png)
 
-## Install (per developer)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-2563eb)](https://code.claude.com/docs/en/plugins)
+![License](https://img.shields.io/github/license/hacka0wi/SnapDeck)
+![Topics](https://img.shields.io/badge/pptx-screenshots-blue)
 
+</div>
+
+A Claude Code plugin that turns a **running web app** into a clean training/demo deck.
+It captures **real UI screenshots** deterministically via headless Chrome, renders **HTML/CSS
+design slides** to PNG, and assembles everything as **full-bleed picture slides** in a `.pptx`.
+
+## Why it's different
+Most "screenshot to slides" flows are manual and inconsistent. SnapDeck is a **pipeline**:
+
+- **Deterministic capture** — drives the live app with headless Chrome (CDP/puppeteer):
+  injects your logged-in session to **skip login**, **forces light mode**, opens **modals/tabs**,
+  scrolls to fields, and reads **element coordinates** so callouts land exactly on the right control.
+- **Design as code** — every slide is authored in HTML/CSS and rendered to a crisp PNG (pixel
+  control over shadows, gradients, fonts, framed screenshots) — not fragile pptx textboxes.
+- **Full-bleed output** — screenshots fill the slide edge-to-edge with compact title cards and
+  **numbered step callouts** beside (never on top of) the UI.
+
+## Pipeline
 ```
-# from a local clone:
-/plugin marketplace add /path/to/snapdeck
-/plugin install snapdeck@snapdeck
-
-# or from a git remote once pushed:
-/plugin marketplace add https://github.com/<org>/snapdeck
-/plugin install snapdeck@snapdeck
+capture.js   live app  → shots/<key>.png + <key>.rects.json   (session inject · light mode · modals · element rects)
+slides.py    content   → slides/<key>.html                     (full-bleed design system)
+render.js    *.html    → *.png                                 (headless Chrome, dsf 2)
+assemble.py  ordered PNGs → out.pptx                            (16:9, full-bleed)
 ```
 
-Then invoke with `/snapdeck`, or just ask: "make a training deck from the app",
-"recapture the screenshots", "cap the screens into pptx", "เอาจอใส่สไลด์".
+## Install
+```
+# from the hosted marketplace:
+/plugin marketplace add https://github.com/hacka0wi/SnapDeck
+/plugin install snapdeck@snapdeck
+```
+Then invoke with `/snapdeck`, or just ask: *"make a training deck from the app"*,
+*"recapture the screenshots"*, *"cap the screens into pptx"*.
 
 ## Requirements
-- System Google Chrome
-- Node (`npm i puppeteer-core` in the work dir)
-- Python with `python-pptx` + `Pillow`
+- System **Google Chrome**
+- **Node** (`npm i puppeteer-core` in the work dir)
+- **Python** with `python-pptx` + `Pillow`
 
-## Layout
+## What's inside
 ```
-.claude-plugin/marketplace.json     # marketplace manifest (lists plugins)
+.claude-plugin/marketplace.json       # marketplace manifest
 plugins/snapdeck/
-  .claude-plugin/plugin.json         # plugin manifest
-  skills/snapdeck/                   # the skill (SKILL.md + scripts + example-config.json)
+  .claude-plugin/plugin.json           # plugin manifest
+  skills/snapdeck/
+    SKILL.md                            # the full pipeline guide + gotchas
+    example-config.json                 # a worked capture config
+    scripts/  lib.js capture.js slides.py render.js assemble.py build-example.py
 ```
 
-## Sharing with the team
-Push this repo to GitHub, then teammates run the two `/plugin` commands above with the repo URL.
+## Notes
+- Adapt the design system (font, colors, footer) and per-page capture config to your app.
+- SnapDeck never triggers destructive actions (delete / submit / encrypt) just to get a screenshot.
+
+---
+<div align="center"><sub>Built with Claude Code · MIT licensed</sub></div>
