@@ -10,6 +10,12 @@
 ![License](https://img.shields.io/github/license/hacka0wi/SnapDeck)
 ![Topics](https://img.shields.io/badge/pptx-screenshots-blue)
 
+<br>
+
+![SnapDeck demo](assets/demo.gif)
+
+<sub>A live app screen → a full-bleed SnapDeck slide with numbered callouts</sub>
+
 </div>
 
 A Claude Code plugin that turns a **running web app** into a clean training/demo deck.
@@ -26,6 +32,14 @@ Most "screenshot to slides" flows are manual and inconsistent. SnapDeck is a **p
   control over shadows, gradients, fonts, framed screenshots) — not fragile pptx textboxes.
 - **Full-bleed output** — screenshots fill the slide edge-to-edge with compact title cards and
   **numbered step callouts** beside (never on top of) the UI.
+
+<div align="center">
+
+![Sample SnapDeck slide](assets/sample-output.png)
+
+<sub>An example slide SnapDeck generated from a live app — full-bleed screenshot · title card · numbered callouts <i>(demo app shown; point it at your own)</i></sub>
+
+</div>
 
 ## Pipeline
 ```

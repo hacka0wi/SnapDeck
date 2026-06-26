@@ -1,45 +1,47 @@
-<!doctype html><html><head><meta charset="utf-8">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap');
+<!doctype html><html><head><meta charset="utf-8"><style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1200px;height:620px;font-family:'Prompt',sans-serif;color:#16264f}
-.slide{position:relative;width:1200px;height:620px;background:linear-gradient(135deg,#ffffff 0%,#eef3fd 100%);padding:54px 64px;overflow:hidden}
+html,body{width:1200px;height:600px;font-family:'Inter',sans-serif;color:#16264f}
+.h{position:relative;width:1200px;height:600px;background:
+   radial-gradient(900px 380px at 88% -8%, #dbe7ff 0%, transparent 60%),
+   radial-gradient(700px 360px at -6% 110%, #e6f0ff 0%, transparent 60%),
+   linear-gradient(135deg,#ffffff,#f4f8ff);overflow:hidden;padding:50px 60px}
 .brand{display:flex;align-items:center;gap:14px}
-.logo{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,#2563eb,#3b82f6);box-shadow:0 8px 22px rgba(37,99,235,.4);display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px}
-.brand .nm{font-size:34px;font-weight:800;letter-spacing:-.5px}
-.brand .hl{color:#2563eb}
-.tag{margin-top:14px;font-size:22px;color:#16264f;font-weight:600}
-.tag .hl{color:#2563eb}
-.sub{margin-top:6px;font-size:16px;color:#5b6b86;max-width:760px;line-height:1.5}
-.flow{display:flex;align-items:center;gap:18px;margin-top:46px}
-.node{flex:1;background:#fff;border:1px solid #e1e8f4;border-radius:16px;box-shadow:0 14px 34px rgba(22,38,79,.10);padding:20px 18px;text-align:center}
-.node .ic{width:46px;height:46px;margin:0 auto 10px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff}
-.node .t{font-weight:700;font-size:17px}
-.node .d{font-size:12.5px;color:#5b6b86;margin-top:4px;line-height:1.35}
-.arr{color:#9bb0d6;font-size:26px;font-weight:700}
-.feat{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
-.chip{background:#e8eefc;color:#2563eb;font-weight:600;font-size:13.5px;padding:7px 15px;border-radius:999px}
-.foot{position:absolute;right:64px;bottom:26px;font-size:13px;color:#9aa7bd}
-.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.5}
-</style></head>
-<body><div class="slide">
-  <div class="blob" style="width:240px;height:240px;right:-60px;top:-70px;background:radial-gradient(circle,#cfe0fb,transparent 70%)"></div>
-  <div class="brand"><div class="logo">📸</div><div class="nm">Snap<span class="hl">Deck</span></div></div>
-  <div class="tag">Turn a <span class="hl">live web app</span> into a polished <span class="hl">PowerPoint</span> deck</div>
-  <div class="sub">A Claude Code plugin that captures real UI screenshots deterministically, renders HTML/CSS design slides, and assembles a full-bleed .pptx — training manuals & demo decks in minutes.</div>
+.logo{width:56px;height:56px;border-radius:15px;background:linear-gradient(135deg,#2563eb,#60a5fa);
+   box-shadow:0 10px 26px rgba(37,99,235,.45);display:flex;align-items:center;justify-content:center}
+.logo svg{width:30px;height:30px}
+.brand .nm{font-size:36px;font-weight:800;letter-spacing:-.5px}.hl{color:#2563eb}
+.tag{margin-top:18px;font-size:27px;font-weight:700;line-height:1.25;max-width:760px}
+.sub{margin-top:12px;font-size:16.5px;color:#5b6b86;max-width:720px;line-height:1.55}
+.flow{display:flex;align-items:center;gap:16px;margin-top:40px}
+.node{flex:1;background:#fff;border:1px solid #e4ecf8;border-radius:16px;box-shadow:0 16px 36px rgba(22,38,79,.10);padding:18px 16px;text-align:center}
+.node .ic{width:44px;height:44px;margin:0 auto 10px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.node .ic svg{width:23px;height:23px;stroke:#fff;fill:none;stroke-width:2}
+.node .t{font-weight:700;font-size:16.5px}.node .d{font-size:12px;color:#64748b;margin-top:3px;line-height:1.35}
+.arr{color:#9bb4e0;font-size:24px;font-weight:800}
+.feat{display:flex;gap:9px;margin-top:30px;flex-wrap:wrap}
+.chip{background:rgba(37,99,235,.09);color:#2563eb;font-weight:600;font-size:13px;padding:7px 14px;border-radius:999px}
+.badge{position:absolute;right:60px;top:54px;background:#0f172a;color:#fff;font-size:12px;font-weight:600;padding:7px 14px;border-radius:999px}
+</style></head><body><div class="h">
+  <div class="badge">Claude Code plugin</div>
+  <div class="brand">
+    <div class="logo"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="13" rx="2.5" stroke="#fff" stroke-width="2"/><circle cx="9" cy="11" r="2.4" stroke="#fff" stroke-width="2"/><path d="M3 16l5-4 4 3 3-3 6 5" stroke="#fff" stroke-width="2" fill="none" stroke-linejoin="round"/></svg></div>
+    <div class="nm">Snap<span class="hl">Deck</span></div>
+  </div>
+  <div class="tag">Turn a <span class="hl">live web app</span> into a polished, full-bleed <span class="hl">PowerPoint</span> deck</div>
+  <div class="sub">A Claude Code plugin that captures real UI screenshots deterministically, renders HTML/CSS design slides, and assembles a full-bleed <b>.pptx</b> — training manuals &amp; demo decks in minutes.</div>
   <div class="flow">
-    <div class="node"><div class="ic" style="background:linear-gradient(135deg,#2563eb,#3b82f6)">🌐</div><div class="t">Live App</div><div class="d">headless Chrome · skip login · light mode · open modals</div></div>
+    <div class="node"><div class="ic" style="background:linear-gradient(135deg,#2563eb,#3b82f6)"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div><div class="t">Live App</div><div class="d">headless Chrome · skip login · light mode</div></div>
     <div class="arr">→</div>
-    <div class="node"><div class="ic" style="background:linear-gradient(135deg,#7c3aed,#9333ea)">🖼️</div><div class="t">Capture + Design</div><div class="d">real screenshots + HTML/CSS slides → PNG</div></div>
+    <div class="node"><div class="ic" style="background:linear-gradient(135deg,#7c3aed,#9333ea)"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="M4 17l5-4 4 3 3-2 4 3"/></svg></div><div class="t">Capture + Design</div><div class="d">real screenshots + HTML/CSS → PNG</div></div>
     <div class="arr">→</div>
-    <div class="node"><div class="ic" style="background:linear-gradient(135deg,#0f9950,#12b76a)">📊</div><div class="t">.pptx</div><div class="d">full-bleed slides · numbered callouts</div></div>
+    <div class="node"><div class="ic" style="background:linear-gradient(135deg,#0f9950,#12b76a)"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6M9 21h6"/></svg></div><div class="t">.pptx</div><div class="d">full-bleed slides · numbered callouts</div></div>
   </div>
   <div class="feat">
-    <span class="chip">Session inject (no login)</span>
+    <span class="chip">Session inject — no login</span>
     <span class="chip">Light-mode forced</span>
     <span class="chip">Element-coordinate callouts</span>
     <span class="chip">Full-bleed · no white borders</span>
-    <span class="chip">Deterministic / repeatable</span>
+    <span class="chip">Deterministic</span>
   </div>
-  <div class="foot">SnapDeck · Claude Code plugin</div>
 </div></body></html>
