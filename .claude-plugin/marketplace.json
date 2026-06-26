@@ -12,7 +12,11 @@
       "description": "SnapDeck: build full-bleed PowerPoint decks from a LIVE web app — capture real UI screenshots via headless Chrome (inject session to skip login, force light mode, open modals/tabs, read element coordinates for crisp callouts), render HTML/CSS design slides to PNG, and assemble everything as full-bleed picture slides in a .pptx.",
       "source": "./plugins/snapdeck",
       "category": "productivity",
-      "author": { "name": "hacka0wi", "email": "hacka.rawi@gmail.com" }
+      "author": {
+        "name": "hacka0wi",
+        "email": "hacka.rawi@gmail.com"
+      },
+      "license": "MIT"
     }
   ]
 }

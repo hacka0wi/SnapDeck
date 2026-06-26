@@ -6,5 +6,15 @@
     "name": "hacka0wi",
     "email": "hacka.rawi@gmail.com"
   },
-  "keywords": ["snapdeck", "pptx", "powerpoint", "screenshots", "deck", "training", "puppeteer", "headless-chrome"]
+  "keywords": [
+    "snapdeck",
+    "pptx",
+    "powerpoint",
+    "screenshots",
+    "deck",
+    "training",
+    "puppeteer",
+    "headless-chrome"
+  ],
+  "license": "MIT"
 }

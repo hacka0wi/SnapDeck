@@ -40,7 +40,6 @@ html,body{{width:1280px;height:720px;font-family:'{BRAND['font']}',sans-serif;co
 .card h1{{font-size:25px;font-weight:700;margin-top:9px;line-height:1.18}}.hl{{color:{BRAND['accent']}}}
 .sub{{margin-top:9px;font-size:16px;color:{BRAND['muted']};line-height:1.45;max-width:560px}}
 .mk{{position:absolute;width:34px;height:34px;border-radius:50%;background:{BRAND['accent']};color:#fff;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,99,235,.6);border:3px solid #fff;transform:translate(-50%,-50%);z-index:3}}
-.foot{{position:absolute;right:26px;bottom:14px;font-size:12px;color:rgba(255,255,255,.0)}}
 """
 
 def _hl(t):
