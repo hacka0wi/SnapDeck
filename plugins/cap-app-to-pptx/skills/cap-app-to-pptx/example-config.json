@@ -1,0 +1,40 @@
+{
+  "_comment": "Worked capture config for Orch.io. Adapt origin / auth / theme / pages to the target app. Get auth.json by reading localStorage['auth-storage'] from a logged-in browser (Chrome MCP javascript_tool). Run: node scripts/capture.js example-config.json",
+  "origin": "https://neb-ow.oneweb.tech",
+  "outDir": "shots",
+  "auth":  { "key": "auth-storage",  "file": "auth.json" },
+  "theme": { "key": "theme-storage", "value": "{\"state\":{\"mode\":\"light\"},\"version\":0}" },
+  "pages": [
+    {
+      "key": "login", "path": "/orch/login", "wait": 3000,
+      "targets": [
+        { "by": "sel",  "q": "input[type=text],input[name=username]", "label": "Username" },
+        { "by": "sel",  "q": "input[type=password]", "label": "Password" },
+        { "by": "text", "q": "Sign In", "label": "Sign In" }
+      ]
+    },
+    {
+      "key": "audit", "path": "/orch/audit", "wait": 3800,
+      "targets": [
+        { "by": "menu", "q": "Audit", "label": "menu" },
+        { "by": "text", "q": "Filters", "maxy": 160, "label": "Filters" },
+        { "by": "row",  "q": "UPDATE", "ymin": 250, "ymax": 460, "label": "row" }
+      ]
+    },
+    {
+      "key": "audit-detail", "path": "/orch/audit", "wait": 3500,
+      "openRow": "()=>[...document.querySelectorAll('div,tr')].find(e=>{const t=e.textContent||'';const r=e.getBoundingClientRect();return /UPDATE/.test(t)&&r.y>270&&r.y<360&&r.width>800;})",
+      "clicks": ["Changes"],
+      "targets": []
+    },
+    {
+      "key": "create-form", "path": "/orch/projects", "wait": 3000,
+      "clicks": ["Create Project"],
+      "targets": [
+        { "by": "label", "q": "Project Name", "label": "Project Name" },
+        { "by": "label", "q": "Description",  "label": "Description" },
+        { "by": "label", "q": "Base URL",     "label": "Base URL" }
+      ]
+    }
+  ]
+}

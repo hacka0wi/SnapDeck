@@ -1,0 +1,10 @@
+{
+  "name": "cap-app-to-pptx",
+  "version": "1.0.0",
+  "description": "Capture a live web app into a polished full-bleed PowerPoint deck (headless Chrome → HTML/CSS → PNG → .pptx) with deterministic screenshots, session injection, light-mode forcing, and numbered step callouts.",
+  "author": {
+    "name": "hacka0wi",
+    "email": "avalantclaudeai@gmail.com"
+  },
+  "keywords": ["pptx", "powerpoint", "screenshots", "deck", "training", "puppeteer", "headless-chrome"]
+}

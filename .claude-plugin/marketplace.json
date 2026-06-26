@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "deck-tools",
+  "description": "Claude Code plugins for turning live web apps into polished training/demo decks.",
+  "owner": {
+    "name": "hacka0wi",
+    "email": "avalantclaudeai@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "cap-app-to-pptx",
+      "description": "Build full-bleed PowerPoint training/demo decks from a LIVE web app: capture real UI screenshots via headless Chrome (inject session to skip login, force light mode, open modals/tabs, read element coordinates for crisp callouts), render HTML/CSS design slides to PNG, and assemble everything as full-bleed picture slides in a .pptx.",
+      "source": "./plugins/cap-app-to-pptx",
+      "category": "productivity",
+      "author": { "name": "hacka0wi", "email": "avalantclaudeai@gmail.com" }
+    }
+  ]
+}

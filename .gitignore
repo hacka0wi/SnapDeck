@@ -1,0 +1,6 @@
+node_modules/
+shots/
+slides/
+*.pptx
+__pycache__/
+.DS_Store
